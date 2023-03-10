@@ -11,7 +11,7 @@ h1 {
 
 .bayan-item {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   padding-bottom: 5px;
   border-bottom: 2px solid #d9d9d9;
   padding: 0;
@@ -50,7 +50,7 @@ h1 {
 
 .bayan-item :checked ~ .item-content, 
 .bayan-item input:hover ~ .item-content {
-  height: 300px;
+  height: max-content;
 }
 
 .bayan-item :checked ~ .item-content >
