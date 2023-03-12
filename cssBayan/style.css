@@ -1,21 +1,27 @@
+* {
+  position: static;
+}
+
 .bayan {
-  width: 400px;
+  max-width: 70vw;
   margin: 0 auto;
+  padding: 0 2%;
 }
 
 h1 {
-  padding-bottom: 5px;
-  border-bottom: 2px solid #d9d9d9;
-  margin-bottom: 20px;
+  padding-bottom: .5rem;
+  border-bottom: .2rem solid #d9d9d9;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
 }
 
 .bayan-item {
   width: 100%;
   margin-bottom: 0;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #d9d9d9;
-  padding: 0;
+  padding-bottom: 0;
+  border-bottom: .2rem solid #d9d9d9;
   position: relative;
+  font-size: 1.5rem;
 }
 
 .bayan-item input {
@@ -28,29 +34,39 @@ h1 {
   height: 100%;
   cursor: pointer;
   appearance: none;
+  border-radius: 0;
+  z-index: 3;
 }
 
 .item-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: .3rem 0;
 }
 
 .item-content {
   width: 100%;
   display: block;
-  height: 25px;
   overflow: hidden;
-  transition: all .2s;
 }
 
 .item-btn {
-  transition: all .2s;
+  transition: all .5s;
+  font-size: 1.5em;
 }
 
-.bayan-item :checked ~ .item-content, 
-.bayan-item input:hover ~ .item-content {
-  height: max-content;
+.item-img {
+  transition: all .5s;
+  margin: 0 auto;
+  max-height: 0;
+}
+
+.bayan-item :checked ~ .item-content .item-img, 
+.bayan-item input:hover ~ .item-content .item-img {
+  max-height: 100ex;
+  object-fit: contain;
+  font-size: 2.2em;
 }
 
 .bayan-item :checked ~ .item-content >
@@ -60,4 +76,31 @@ h1 {
   .item-title >
   .item-btn {
   transform: rotate(45deg);
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 1.8rem;
+    border-bottom: .15rem solid #d9d9d9;
+  }
+  .bayan-item {
+    font-size: 1.2rem;
+    border-bottom: .15rem solid #d9d9d9;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+    border-bottom: .1rem solid #d9d9d9;
+  }
+
+  .bayan {
+    max-width: 95vw;
+  }
+  
+  .bayan-item {
+    font-size: 1rem;
+    border-bottom: .1rem solid #d9d9d9;
+  }
 }
